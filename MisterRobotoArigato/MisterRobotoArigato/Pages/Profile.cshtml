@@ -1,0 +1,32 @@
+﻿@page
+@model MisterRobotoArigato.Pages.ProfileModel
+@{
+    ViewData["Title"] = "Profile";
+    Layout = "_Layout";
+}
+
+
+<div class="container ">
+<h2>Account Profile</h2>
+    <div class="row">
+        <div class="col-md-6">
+        <form method="post">
+            <div class="form-group">
+                <label asp-for="FirstName" class="control-label"></label>
+                <input asp-for="FirstName" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName" class="control-label"></label>
+                <input asp-for="LastName" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input readonly="readonly" asp-for="Email" class="form-control" />
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-warning btn-lg btn-block">Update</button>
+            </div>
+        </form>
+        </div>
+    </div>
+</div>
